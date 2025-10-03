@@ -1,0 +1,118 @@
+.cartEmptyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.cartEmptyText {
+    font-family: "Inter 18pt";
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #868e96;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 8px 0px #21252914;
+    box-shadow: 0px 1px 2px 0px #2125291a;
+    border-radius: 1rem;
+}
+
+.cartItems {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.cartItem {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-block-end: 1rem;
+
+    // Декоративная серая линия
+    &::after {
+        position: absolute;
+        bottom: 0;
+        left: 76px;
+        content: "";
+        width: 320px;
+        height: 1px;
+        background-color: #dee2e6;
+    }
+
+    &:last-child {
+        &::after {
+            display: none; // Убираем линию у последнего элемента
+        }
+    }
+}
+
+.cartItemInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding-inline-start: 0.75rem;
+}
+
+.cartItemName {
+    font-family: "Inter 18pt";
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 155%;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    padding-inline-end: 0.75rem;
+}
+
+.cartItemWeight {
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    padding-block-start: 0.25rem;
+}
+
+.cartItemPrice {
+    font-family: "Inter 18pt";
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
+.cartItemControls {
+    margin-inline-start: auto;
+}
+
+.modalTotal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block-start: 0.75rem;
+}
+
+.modalTotalText {
+    font-family: "Inter 18pt";
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #000000;
+}
+
+.modalTotalPrice {
+    font-family: "Inter 18pt";
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #000000;
+}
